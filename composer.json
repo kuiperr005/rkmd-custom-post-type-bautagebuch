@@ -1,0 +1,7 @@
+{
+  "name": "kuiperr005/rkmd-custom-post-types",
+  "type": "wordpress-muplugin",
+  "require": {
+    "composer/installers": "~1.0.12"
+  }
+}
