@@ -1,4 +1,4 @@
-### RKMD Custom Post Types Plugin ###
+## RKMD Custom Post Types Plugin ##
 
 Contributors: (this should be a list of wordpress.org userid's)
 Tags: custom post types, wordpress
@@ -10,14 +10,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Registers (currently) one Custom Post Type in Wordpress, named 'activity'.
 
-## Description ##
+### Description ###
 
 This plugin registers a single Custom Post Type, named 'activity'.
 
 For backwards compatibility, if this section is missing, the full length of the short description will be used, and
 Markdown parsed.
 
-## Installation ##
+### Installation ###
 
 This section describes how to install the plugin and get it working.
 
