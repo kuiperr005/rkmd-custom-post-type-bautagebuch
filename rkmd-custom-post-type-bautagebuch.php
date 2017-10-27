@@ -21,7 +21,7 @@
  * Author URI:        https://rkmediadesign.nl/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       rkmd-custom-post-types
+ * Text Domain:       rkmd-custom-post-type-bautagebuch
  * Domain Path:       /languages
  */
 
