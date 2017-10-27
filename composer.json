@@ -2,6 +2,6 @@
   "name": "kuiperr005/rkmd-custom-post-type-bautagebuch",
   "type": "wordpress-muplugin",
   "require": {
-    "composer/installers": "~1.0.12"
+    "composer/installers": "^1.0"
   }
 }
