@@ -9,8 +9,8 @@
  * @link       http://rkmediadesign.nl
  * @since      1.0.0
  *
- * @package    RKMD_Custom_Post_Types
- * @subpackage RKMD_Custom_Post_Types/includes
+ * @package    RKMD_Custom_Post_Type_Bautagebuch
+ * @subpackage RKMD_Custom_Post_Type_Bautagebuch/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    RKMD_Custom_Post_Types
- * @subpackage RKMD_Custom_Post_Types/includes
+ * @package    RKMD_Custom_Post_Type_Bautagebuch
+ * @subpackage RKMD_Custom_Post_Type_Bautagebuch/includes
  * @author     RK Mediadesign <info@rkmediadesign.nl>
  */
-class RKMD_Custom_Post_Types {
+class RKMD_Custom_Post_Type_Bautagebuch {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class RKMD_Custom_Post_Types {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      RKMD_Custom_Post_Types_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      RKMD_Custom_Post_Type_Bautagebuch_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -68,7 +68,7 @@ class RKMD_Custom_Post_Types {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'rkmd-custom-post-types';
+		$this->plugin_name = 'rkmd-custom-post-type-bautagebuch';
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
@@ -83,10 +83,10 @@ class RKMD_Custom_Post_Types {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - RKMD_Custom_Post_Types_Loader. Orchestrates the hooks of the plugin.
-	 * - RKMD_Custom_Post_Types_i18n. Defines internationalization functionality.
-	 * - RKMD_Custom_Post_Types_Admin. Defines all hooks for the admin area.
-	 * - RKMD_Custom_Post_Types_Public. Defines all hooks for the public side of the site.
+	 * - RKMD_Custom_Post_Type_Bautagebuch_Loader. Orchestrates the hooks of the plugin.
+	 * - RKMD_Custom_Post_Type_Bautagebuch_i18n. Defines internationalization functionality.
+	 * - RKMD_Custom_Post_Type_Bautagebuch_Admin. Defines all hooks for the admin area.
+	 * - RKMD_Custom_Post_Type_Bautagebuch_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -100,33 +100,33 @@ class RKMD_Custom_Post_Types {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-rkmd-custom-post-types-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-rkmd-custom-post-type-bautagebuch-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-rkmd-custom-post-types-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-rkmd-custom-post-type-bautagebuch-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rkmd-custom-post-types-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rkmd-custom-post-type-bautagebuch-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rkmd-custom-post-types-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rkmd-custom-post-type-bautagebuch-public.php';
 
-		$this->loader = new RKMD_Custom_Post_Types_Loader();
+		$this->loader = new RKMD_Custom_Post_Type_Bautagebuch_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the RKMD_Custom_Post_Types_i18n class in order to set the domain and to register the hook
+	 * Uses the RKMD_Custom_Post_Type_Bautagebuch_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -134,7 +134,7 @@ class RKMD_Custom_Post_Types {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new RKMD_Custom_Post_Types_i18n();
+		$plugin_i18n = new RKMD_Custom_Post_Type_Bautagebuch_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -149,7 +149,7 @@ class RKMD_Custom_Post_Types {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new RKMD_Custom_Post_Types_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new RKMD_Custom_Post_Type_Bautagebuch_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -166,7 +166,7 @@ class RKMD_Custom_Post_Types {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new RKMD_Custom_Post_Types_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new RKMD_Custom_Post_Type_Bautagebuch_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -197,7 +197,7 @@ class RKMD_Custom_Post_Types {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    RKMD_Custom_Post_Types_Loader    Orchestrates the hooks of the plugin.
+	 * @return    RKMD_Custom_Post_Type_Bautagebuch_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

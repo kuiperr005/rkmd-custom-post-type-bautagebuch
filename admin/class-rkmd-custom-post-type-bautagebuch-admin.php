@@ -6,8 +6,8 @@
  * @link       http://rkmediadesign.nl
  * @since      1.0.0
  *
- * @package    RKMD_Custom_Post_Types 
- * @subpackage RKMD_Custom_Post_Types/admin
+ * @package    RKMD_Custom_Post_Type_Bautagebuch 
+ * @subpackage RKMD_Custom_Post_Type_Bautagebuch/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    RKMD_Custom_Post_Types
- * @subpackage RKMD_Custom_Post_Types/admin
+ * @package    RKMD_Custom_Post_Type_Bautagebuch
+ * @subpackage RKMD_Custom_Post_Type_Bautagebuch/admin
  * @author     RK Mediadesign <info@rkmediadesign.nl>
  */
-class RKMD_Custom_Post_Types_Admin {
+class RKMD_Custom_Post_Type_Bautagebuch_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -73,7 +73,7 @@ class RKMD_Custom_Post_Types_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/rkmd-custom-post-types-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/rkmd-custom-post-type-bautagebuch-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,42 +96,42 @@ class RKMD_Custom_Post_Types_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/rkmd-custom-post-types-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/rkmd-custom-post-type-bautagebuch-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
 	/**
-	 * Create CPT for Activity
+	 * Create CPT for Bautagebuch
 	 * @return function creates custom post type
 	 */
-	public function create_cpt_activity() {
-	    register_post_type( 'activity',
+	public function create_cpt_bautagebuch() {
+	    register_post_type( 'bautagebuch',
 	        array(
 	            'labels' => array(
-	                'name' => 'Activiteiten',
-	                'singular_name' => 'Activiteit',
-	                'add_new' => 'Nieuwe activiteit',
-	                'add_new_item' => 'Nieuwe activiteit toevoegen',
-	                'edit' => 'Bewerken',
-	                'edit_item' => 'Bewerk Activiteit',
-	                'new_item' => 'Nieuwe Activiteit',
-	                'view' => 'Bekijken',
-	                'view_item' => 'Bekijk Activiteit',
-	                'search_items' => 'Zoek Activiteiten',
-	                'not_found' => 'Geen Activiteiten gevonden',
-	                'not_found_in_trash' => 'Geen Activiteiten gevonden in de prullenbak',
-	                'parent' => 'Hoofdactiviteit'
+	                'name' => 'Bautagebuch',
+	                'singular_name' => 'Artikel',
+	                'add_new' => 'Hinzufügen',
+	                'add_new_item' => 'Neuen Artikel hinzufügen',
+	                'edit' => 'Bearbeiten',
+	                'edit_item' => 'Atrikel bearbeiten',
+	                'new_item' => 'Neuen Artikel',
+	                'view' => 'ansehen',
+	                'view_item' => 'Artikel anzeigen',
+	                'search_items' => 'Suche Artikel',
+	                'not_found' => 'Keine Einträge gefunden',
+	                'not_found_in_trash' => 'Keine Artikel im Müll gefunden',
+	                'parent' => 'Hauptartikel'
 	            ),
 	            'public' => true,
 	            'menu_position' => 4,
-	            'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
+	            'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
 	            'taxonomies' => array( '' ),
-	            'menu_icon' => 'dashicons-megaphone',
-	            'has_archive' => true,
+	            'menu_icon' => 'dashicons-book-alt',
+	            'has_archive' => false,
 
 	            // The rewrite handles the URL structure.
 				'rewrite' => array(
-					'slug'       => 'activiteiten',
+					'slug'       => 'artikel',
 					'with_front' => false,
 					'pages'      => true,
 					'feeds'      => true,

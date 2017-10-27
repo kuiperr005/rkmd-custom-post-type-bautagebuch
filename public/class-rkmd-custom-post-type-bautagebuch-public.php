@@ -6,8 +6,8 @@
  * @link       http://rkmediadesign.nl
  * @since      1.0.0
  *
- * @package    RKMD_Custom_Post_Types
- * @subpackage RKMD_Custom_Post_Types/public
+ * @package    RKMD_Custom_Post_Type_Bautagebuch
+ * @subpackage RKMD_Custom_Post_Type_Bautagebuch/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    RKMD_Custom_Post_Types
- * @subpackage RKMD_Custom_Post_Types/public
+ * @package    RKMD_Custom_Post_Type_Bautagebuch
+ * @subpackage RKMD_Custom_Post_Type_Bautagebuch/public
  * @author     RK Mediadesign <info@rkmediadesign.nl>
  */
-class RKMD_Custom_Post_Types_Public {
+class RKMD_Custom_Post_Type_Bautagebuch_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -73,7 +73,7 @@ class RKMD_Custom_Post_Types_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/rkmd-custom-post-types-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/rkmd-custom-post-type-bautagebuch-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class RKMD_Custom_Post_Types_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/rkmd-custom-post-types-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/rkmd-custom-post-type-bautagebuch-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 

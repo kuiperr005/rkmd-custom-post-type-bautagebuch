@@ -9,8 +9,8 @@
  * @link       http://rkmediadesign.nl
  * @since      1.0.0
  *
- * @package    RKMD_Custom_Post_Types
- * @subpackage RKMD_Custom_Post_Types/includes
+ * @package    RKMD_Custom_Post_Type_Bautagebuch
+ * @subpackage RKMD_Custom_Post_Type_Bautagebuch/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    RKMD_Custom_Post_Types
- * @subpackage RKMD_Custom_Post_Types/includes
+ * @package    RKMD_Custom_Post_Type_Bautagebuch
+ * @subpackage RKMD_Custom_Post_Type_Bautagebuch/includes
  * @author     RK Mediadesign <info@rkmediadesign.nl>
  */
-class RKMD_Custom_Post_Types_i18n {
+class RKMD_Custom_Post_Type_Bautagebuch_i18n {
 
 
 	/**

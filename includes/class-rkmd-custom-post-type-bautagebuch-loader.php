@@ -6,8 +6,8 @@
  * @link       http://rkmediadesign.nl
  * @since      1.0.0
  *
- * @package    RKMD_Custom_Post_Types
- * @subpackage RKMD_Custom_Post_Types/includes
+ * @package    RKMD_Custom_Post_Type_Bautagebuch
+ * @subpackage RKMD_Custom_Post_Type_Bautagebuch/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    RKMD_Custom_Post_Types
- * @subpackage RKMD_Custom_Post_Types/includes
+ * @package    RKMD_Custom_Post_Type_Bautagebuch
+ * @subpackage RKMD_Custom_Post_Type_Bautagebuch/includes
  * @author     RK Mediadesign <info@rkmediadesign.nl>
  */
-class RKMD_Custom_Post_Types_Loader {
+class RKMD_Custom_Post_Type_Bautagebuch_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

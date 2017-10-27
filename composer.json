@@ -1,5 +1,5 @@
 {
-  "name": "kuiperr005/rkmd-custom-post-types",
+  "name": "kuiperr005/rkmd-custom-post-type-bautagebuch",
   "type": "wordpress-muplugin",
   "require": {
     "composer/installers": "~1.0.12"

@@ -1,4 +1,4 @@
-## RKMD Custom Post Types Plugin ##
+## RKMD Custom Post Type Bautagebuch ##
 
 Contributors: (this should be a list of wordpress.org userid's)
 Tags: custom post types, wordpress
@@ -12,7 +12,7 @@ Registers (currently) one Custom Post Type in Wordpress, named 'activity'.
 
 ### Description ###
 
-This plugin registers a single Custom Post Type, named 'activity'.
+This plugin registers a single Custom Post Type, named 'bautagebuch'.
 
 For backwards compatibility, if this section is missing, the full length of the short description will be used, and
 Markdown parsed.
@@ -23,5 +23,5 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload `rkmd-custom-post-types.php` to the `/wp-content/plugins/` directory
+1. Upload `rkmd-custom-post-type-bautagebuch.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
